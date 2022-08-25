@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earrings</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/24c494a6b6.js"
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+  <div id="container">
+    <div id="announcement-bar">
+        <p id="lable">Free Shipping on Orders Over $75 and Free Returns (US ONLY)</p>
+    </div>
+    <div id="navbar">
+        <div id="content">
+            <div id="img">
+            <img src="https://cdn.shopify.com/s/files/1/0627/7388/7215/files/04122019_logo2_90x.png?b=allow_avif&v=1645644264" alt="lovoda logo">
+            </div> 
+        <div id="links">
+        <a href="index.html"><p>Home</p></a>
+        <a href="ear.html"><p>Earrings</p></a>
+        <a href="necklace.html"><p>Necklaces</p></a>
+        <a href="bracelets.html"><p>Bracelets</p></a>
+        <a href="rings.html"><p>Rings</p></a>
+        </div>
+        </div>
+        <div id="icons">
+           <a href=""><i class="fa-solid fa-magnifying-glass"></i></a> 
+           <a href="login.html"><i class="fa-solid fa-user"></i></a>
+           <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div> 
+    </div>
+    <div id="pageTitle">
+        <p id="Title">Earrings</p>
+    </div>
+    <div id="filters">
+        <p>Filter : <select id="filter-price">
+            <option value="">Price</option>
+            <option value="">High To Low</option>
+            <option value="">Low To High</option>
+        </select></p> 
+        <p>Short : <span><select id="short">
+            <option value="">Featured</option>
+            <option value="">A to Z</option>
+            <option value="">Z to A</option>
+        </select></span></p>
+    </div>
+    <div id="home_prod">     
+    </div>
+    <div id="otherinfo">
+        <div id="webinfo">
+            <div id="info">
+                <h3>Info</h3>
+                <p>Search</p>
+                <p>Term of Service</p>
+                <p>Refund Policy</p>
+                <p>Wholesale</p>
+                <p>Wholesale Signup Form</p>
+                <p>Shipping</p>
+            </div>
+            <div id="contact">
+                <h3>Contact Us!</h3>
+                <p>Need to talk? Reach us via email, phone or text!</p>
+                <p id="cont">Email: Customerservice@Lovoda.com</p>
+                <p id="cont">Phone: (443) 500-1200</p>
+                <p id="msg">**Msg &data rates may apply</p>
+            </div>
+        </div>
+        <div id="social">
+            <div id="email">
+                <p>Subscribe to our emails</p>
+                <input type="email" placeholder="Email">
+            </div>
+            <div id="socialmedia">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-pinterest"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-tiktok"></i>
+            </div>
+        </div>
+
+    </div>
+    <div id="cards">
+        <img src="https://drive.google.com/uc?export=view&id=1OlFGadgnnTklKagQhiz3HKSF-d7qhCol" alt="">
+        <p>© 2022, Lovoda Powered by Shopify</p>
+    </div>
+    
+</div>
+</body>
+</html>
+<script>
+    let allProd=[
+        {img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/011000098-2__43894_823x.jpg?v=1645115759",
+        hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/011000098-3__52395_823x.jpg?v=1645115762",
+        name:"Rays Of Light Hoops",
+        price:"$16.00",
+        },
+        {img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L101035-1_823x.jpg?v=1647540132",
+        hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L101035-4_823x.jpg?v=1647540161",
+        name:"Cyprus Hoop Earrings",
+        price:"$18.00"
+        },
+        {img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L101015-1_823x.jpg?v=1646760637",
+        hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L101015-3_823x.jpg?v=1646760639",
+        name:"Daisy Post Earrings",
+        price:"$16.00"
+        },
+        {img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/011300002-2__23761_823x.jpg?v=1645110224",
+        hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/011300001-3__08167_823x.jpg?v=1645110216",
+        name:"Maryland Crab Earrings (18K & 24K Gold)",
+        price:"$15.00"
+        },
+        {img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L101047-C-2_823x.jpg?v=1647541448",
+        hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L101047-C-4_823x.jpg?v=1647541449",
+        name:"Classique Hoop Earrings | Amber",
+        price:"$18.00"
+        },
+        {img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L101046-1_823x.jpg?v=1647540205",
+        hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L101046-4_823x.jpg?v=1647540212",
+        name:"Ball Stud Earrings",
+        price:"$10.00"
+        },
+        {img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L101044-1_823x.jpg?v=1646760990",
+        hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L101044-3_823x.jpg?v=1646760990",
+        name:"Fir Drop Earrings",
+        price:"$25.00"
+        },
+        {img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L101006-2__48799_823x.jpg?v=1645116372",
+        hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L101006-3__61677_823x.jpg?v=1645116374",
+        name:"Canal Hoop Earrings",
+        price:"$18.00"
+        },
+        {img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/011000124-3__50511_823x.jpg?v=1645115769",
+        hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/011000124-5__81084_823x.jpg?v=1645115771",
+        name:"Ginkgo Leaf Hoop Earrings (14K)",
+        price:"$14.00"
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/010100535-2__75509.jpg?v=1645114230",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/010100535-4__11921_823x.jpg?v=1645114232",
+            name:"Boss Status Bar Earrings (14K)",
+            price:"$14.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L101028-2_493x.jpg?v=1647540052",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L101028-4_493x.jpg?v=1647540053",
+            name:"Vinci Ear Jacket",
+            price:"$21.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L101005-2__93742_493x.jpg?v=1645116076",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L101005-3__50209_493x.jpg?v=1645116078",
+            name:"Simplicity Hoop Earrings",
+            price:"$16.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/010200826-C-1__83187_493x.jpg?v=1652369565",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/010200826-C-3__07211_493x.jpg?v=1652369565",
+            name:"Rhinestone Wing Earrings | Clear",
+            price:"$14.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/010400034-1__46864_493x.jpg?v=1645112191",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/010400034-4__16790_493x.jpg?v=1645112193",
+            name:"Straight Bar Ear Crawlers (14K)",
+            price:"Regular price$15.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L101026-B-1_493x.jpg?v=1649869645",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L101026-B-4_493x.jpg?v=1649869699",
+            name:"Fraise Dangle Earrings",
+            price:"$26.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L101053-1_493x.jpg?v=1647606494",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L101053-4_493x.jpg?v=1647606502",
+            name:"Flare Post Earrings",
+            price:"$32.00",
+        },
+    ]
+    let charArr = JSON.parse(localStorage.getItem("chartItem")) || [];
+     let buyArr = JSON.parse(localStorage.getItem("buyItem")) || [];
+    let prodDiv = document.querySelector("#home_prod")
+    allProd.forEach(function(ele){
+        let box = document.createElement("div");
+
+        let prodImg = document.createElement("img");
+        prodImg.setAttribute("src",ele.img_url)
+        prodImg.addEventListener("mouseover",changeimg)
+        prodImg.addEventListener("mouseout",returnimg)
+          
+        
+        let prodName = document.createElement("p");
+        prodName.innerText=ele.name
+
+        let prodPrice = document.createElement("p");
+        prodPrice.innerText = ele.price
+
+        let btns = document.createElement("div")
+        btns.id="btnDiv"
+        
+        let btn1 = document.createElement("button")
+        btn1.innerText="Add"
+        btn1.id = "cart"
+        btn1.addEventListener("click",addtoCart);
+
+        function addtoCart(){
+            charArr.push(ele);
+            localStorage.setItem("cartItem", JSON.stringify(charArr))
+        }
+
+        let btn2 = document.createElement("button")
+        btn2.innerText = "Buy"
+        btn2.id = "buy"
+        btn1.addEventListener("click",buyNow);
+        function buyNow(){
+            buyArr.push(ele);
+            localStorage.setItem("buyItem",JSON.stringify(buyArr))
+        }
+        btns.append(btn1,btn2)
+
+        
+        box.append(prodImg,prodName,prodPrice,btns)
+        prodDiv.append(box)
+
+        function changeimg(){
+        prodImg.setAttribute("src",ele.hov_url)
+        }
+
+        function returnimg(){
+            prodImg.setAttribute("src",ele.img_url)
+        }
+    })
+</script>

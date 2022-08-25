@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rings</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/24c494a6b6.js"
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+  <div id="container">
+    <div id="announcement-bar">
+        <p id="lable">Free Shipping on Orders Over $75 and Free Returns (US ONLY)</p>
+    </div>
+    <div id="navbar">
+        <div id="content">
+            <div id="img">
+            <img src="https://cdn.shopify.com/s/files/1/0627/7388/7215/files/04122019_logo2_90x.png?b=allow_avif&v=1645644264" alt="lovoda logo">
+            </div> 
+        <div id="links">
+        <a href="index.html"><p>Home</p></a>
+        <a href="ear.html"><p>Earrings</p></a>
+        <a href="necklace.html"><p>Necklaces</p></a>
+        <a href="bracelets.html"><p>Bracelets</p></a>
+        <a href="rings.html"><p>Rings</p></a>
+        </div>
+        </div>
+        <div id="icons">
+           <a href=""><i class="fa-solid fa-magnifying-glass"></i></a> 
+           <a href="login.html"><i class="fa-solid fa-user"></i></a>
+           <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div> 
+    </div>
+    <div id="pageTitle">
+        <p id="Title">Rings</p>
+    </div>
+    <div id="filters">
+        <p>Filter : <select id="filter-price">
+            <option value="">Price</option>
+            <option value="">High To Low</option>
+            <option value="">Low To High</option>
+        </select></p> 
+        <p>Short : <span><select id="short">
+            <option value="">Featured</option>
+            <option value="">A to Z</option>
+            <option value="">Z to A</option>
+        </select></span></p>
+    </div>
+    <div id="home_prod">     
+    </div>
+    <div id="otherinfo">
+        <div id="webinfo">
+            <div id="info">
+                <h3>Info</h3>
+                <p>Search</p>
+                <p>Term of Service</p>
+                <p>Refund Policy</p>
+                <p>Wholesale</p>
+                <p>Wholesale Signup Form</p>
+                <p>Shipping</p>
+            </div>
+            <div id="contact">
+                <h3>Contact Us!</h3>
+                <p>Need to talk? Reach us via email, phone or text!</p>
+                <p id="cont">Email: Customerservice@Lovoda.com</p>
+                <p id="cont">Phone: (443) 500-1200</p>
+                <p id="msg">**Msg &data rates may apply</p>
+            </div>
+        </div>
+        <div id="social">
+            <div id="email">
+                <p>Subscribe to our emails</p>
+                <input type="email" placeholder="Email">
+            </div>
+            <div id="socialmedia">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-pinterest"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-tiktok"></i>
+            </div>
+        </div>
+
+    </div>
+    <div id="cards">
+        <img src="https://drive.google.com/uc?export=view&id=1OlFGadgnnTklKagQhiz3HKSF-d7qhCol" alt="">
+        <p>© 2022, Lovoda Powered by Shopify</p>
+    </div>
+    
+</div>
+</body>
+</html>
+<script>
+    let allProd=[
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L401014-7-1_823x.jpg?v=1645727998",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L401014-7-3_823x.jpg?v=1645728002",
+            name:"Round and Round Ring",
+            price:"$14.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L401022-7-1_493x.jpg?v=1645729193",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L401022-7-3_493x.jpg?v=1645729199",
+            name:"Ripple Ring",
+            price:"$14.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L401020-7-1_493x.jpg?v=1645728953",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L401020-7-3_493x.jpg?v=1645728959",
+            name:"Dreamer Ring",
+            price:"$14.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L401021-7-1_493x.jpg?v=1645729096",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L401021-7-3_493x.jpg?v=1646420217",
+            name:"Lucky 3's Ring",
+            price:"$14.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L401024-7-1_493x.jpg?v=1645729404",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L401024-7-3_493x.jpg?v=1645729420",
+            name:"Ambition Stone Ring | Pine",
+            price:"$20.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/040500096-3_b68fc76f-25a0-4d72-b457-29574a4be70c_493x.jpg?v=1651248239",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/040500098-4__56279_493x.jpg?v=1645113384",
+            name:"Initial Ring | Size 7",
+            price:"$14.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L401005-7-1__25318_493x.jpg?v=1645115953",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L401005-7-3__71678_493x.jpg?v=1645115954",
+            name:"Dimensions Ring",
+            price:"$12.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L401023-7-1_493x.jpg?v=1645729304",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L401023-7-3_493x.jpg?v=1645729312",
+            name:"Ambition Stone Ring | Dusty Rose",
+            price:"$20.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L401011-7-1_493x.jpg?v=1645722854",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L401011-7-3_493x.jpg?v=1646049249",
+            name:"All Smiles Ring",
+            price:"$14.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L401015-7-1_493x.jpg?v=1645728140",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L401015-7-3_493x.jpg?v=1645728140",
+            name:"Bubbly Ring",
+            price:"$18.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L401002-7-1__65640_493x.jpg?v=1645116385",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L401002-7-3__41755_493x.jpg?v=1646420236",
+            name:"Ophelia Ring",
+            price:"$14.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/040300107-6-1__69086_493x.jpg?v=1650627952",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/040300108-6-3__19117_493x.jpg?v=1650627952",
+            name:"Solitary Simplicity Gem Stone Ring",
+            price:"$14.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L401019-7-1_493x.jpg?v=1645728788",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L401019-7-3_493x.jpg?v=1645728794",
+            name:"Braided Ring",
+            price:"$14.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L401025-7-1_493x.jpg?v=1645729574",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L401025-7-3_493x.jpg?v=1645729655",
+            name:"Ambition Stone Ring | Haze",
+            price:"$20.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L401010-7-1__20090_493x.jpg?v=1645116397",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L401010-7-3__37928_493x.jpg?v=1645116399",
+            name:"Bridge Ring",
+            price:"$14.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L401001-6-2__60235_493x.jpg?v=1645115947",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L401001-6-3__11505_493x.jpg?v=1645115949",
+            name:"Bubbling Adjustable Ring",
+            price:"$18.00",
+        },
+    ]
+    let charArr = JSON.parse(localStorage.getItem("chartItem")) || [];
+     let buyArr = JSON.parse(localStorage.getItem("buyItem")) || [];
+    let prodDiv = document.querySelector("#home_prod")
+    allProd.forEach(function(ele){
+        let box = document.createElement("div");
+
+        let prodImg = document.createElement("img");
+        prodImg.setAttribute("src",ele.img_url)
+        prodImg.addEventListener("mouseover",changeimg)
+        prodImg.addEventListener("mouseout",returnimg)
+          
+        
+        let prodName = document.createElement("p");
+        prodName.innerText=ele.name
+
+        let prodPrice = document.createElement("p");
+        prodPrice.innerText = ele.price
+
+        let btns = document.createElement("div")
+        btns.id="btnDiv"
+        
+        let btn1 = document.createElement("button")
+        btn1.innerText="Add"
+        btn1.id = "cart"
+        btn1.addEventListener("click",addtoCart);
+
+        function addtoCart(){
+            charArr.push(ele);
+            localStorage.setItem("cartItem", JSON.stringify(charArr))
+        }
+
+        let btn2 = document.createElement("button")
+        btn2.innerText = "Buy"
+        btn2.id = "buy"
+        btn1.addEventListener("click",buyNow);
+        function buyNow(){
+            buyArr.push(ele);
+            localStorage.setItem("buyItem",JSON.stringify(buyArr))
+        }
+        btns.append(btn1,btn2)
+
+        
+        box.append(prodImg,prodName,prodPrice,btns)
+        prodDiv.append(box)
+
+        function changeimg(){
+        prodImg.setAttribute("src",ele.hov_url)
+        }
+
+        function returnimg(){
+            prodImg.setAttribute("src",ele.img_url)
+        }
+    })
+</script>
