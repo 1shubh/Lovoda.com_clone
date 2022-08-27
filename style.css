@@ -25,6 +25,7 @@ body{
 }
 #content>#img{
     width: 100px;
+    width: 90px;
     height: 45px;
     cursor: pointer;
 }
@@ -134,6 +135,32 @@ body{
     text-decoration: underline;
 }
 
+#home_prod > div > #btnDiv{
+    display: flex;
+    justify-content: space-between;
+}
+
+#home_prod > div > #btnDiv >#cart{
+    border: none;
+    width: 30%;
+    height:30px;
+    border-radius: 10px;
+    color:#121212BF;  
+    cursor: pointer;
+}
+#home_prod > div > #btnDiv >#cart:hover,#home_prod > div > #btnDiv > #buy:hover{
+    background-color: #121212BF;
+    color: white;
+
+}
+#home_prod > div > #btnDiv > #buy{
+    border: none;
+    width: 30%;
+    height:30px;
+    border-radius: 10px;
+    color:#121212BF;
+    cursor: pointer;
+}
 #otherinfo{
     height:500px;
     margin-top: 60px;
@@ -206,6 +233,7 @@ font-size: 18px;
   justify-content: space-around;
   align-items: center;
   width: 50%; 
+  height: 150px;
   text-align: center;
   font: 10px Assistant,sans-serif;
   color:#121212BF ;
@@ -457,6 +485,156 @@ form >input,form>select{
     font-family: sans-serif;
     font-size: 20px;
     align-items: center;
+}
+#pageTitle{
+    width: 50%;
+    margin-left: 185px;
+}
+#pageTitle>p{
+    font: 40px Assistant,sans-serif;
+    color: #121212;
+}
+#filters{
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin: auto;
+    font: 14px Assistant,sans-serif;
+    color: #121212D9;
+}
+#filter-price,#short{
+    margin-left: 15px;
+    border:none;
+    border-radius: 5px;
+    width: 50%;
+    color: #121212D9;
+    font: 14px Assistant,sans-serif;
+}
+#Account{
+ margin: auto;
+ width:50%;
+ text-align: center;
+}
+#Title{
+  font: 40px Assistant, sans-serif;
+  color: #121212;
+}
+#Account > form{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 10px;
+    width: 60%;
+    margin: auto;
+}
+#fb{
+  border: 2px solid #1877F2;
+  color:#1877F2;
+  height: 40px;
+  font-family: sans-serif;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  justify-content:left;
+  align-items: center;
+}
+#fb > i{
+   font-size: 25px;
+   margin-left: 35px;
+}
+#fb > #fbs{
+    font-size: 13px;
+    margin-left: 20px;
+}
+#google{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 42px;
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    cursor: pointer;
+    font-family: sans-serif;
+    border-radius: 5PX;
+}
+#google > i{
+    font-size: 25px;
+    margin-left:35px ;
+    color: chartreuse;
+}
+#google > #g{
+    color: #121212;
+    font-size: 15px;
+    margin-left: 20px;
+}
+#amz{
+    height: 42px;
+    background-color: #FFA100;
+    font-family: sans-serif;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  justify-content:left;
+  align-items: center;
+  color: white;
+  gap: 25px;
+}
+#amz > i{
+    font-size: 22px;
+    margin-left: 35px;
+}
+#amz > #az{
+    font-size: 15px;
+}
+form > #email{
+    height: 42px;
+    margin-top: 40px;
+}
+form > #pass{
+    height: 42px;
+}
+form > #p{
+    text-align: left;
+    font:13px Assistant,sans-serif;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top:1px;
+    color:#121212BF
+}
+form > button{
+    width: 30%;
+    margin: auto;
+    margin-top: 10px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font: 13px Assistant, sans-serif;
+}
+form > button:hover{
+    font-size: 15px;
+}
+#Cr{
+    font:15px Assistant,sans-serif;
+    text-decoration:underline;
+    color: #121212BF;
+    margin-top: 1px;
+    cursor: pointer;
+}
+#Cr:hover{
+    font-size: 17px;
+}
+form >#nmf{
+    height: 42px;
+    margin-top: 30px;
+}
+form >#nml{
+    height: 42px;
+}
+form > #email2{
+    height: 42px;
+}
+#nmf:hover,#nml:hover,#email:hover,#email2:hover,#pass:hover{
+    border: 2px solid #121212;
+
 }
 
 

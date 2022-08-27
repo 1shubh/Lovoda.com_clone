@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Necklaces</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/24c494a6b6.js"
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+  <div id="container">
+    <div id="announcement-bar">
+        <p id="lable">Free Shipping on Orders Over $75 and Free Returns (US ONLY)</p>
+    </div>
+    <div id="navbar">
+        <div id="content">
+            <div id="img">
+            <img src="https://cdn.shopify.com/s/files/1/0627/7388/7215/files/04122019_logo2_90x.png?b=allow_avif&v=1645644264" alt="lovoda logo">
+            </div> 
+        <div id="links">
+        <a href="index.html"><p>Home</p></a>
+        <a href="ear.html"><p>Earrings</p></a>
+        <a href="necklace.html"><p>Necklaces</p></a>
+        <a href="bracelets.html"><p>Bracelets</p></a>
+        <a href="rings.html"><p>Rings</p></a>
+        </div>
+        </div>
+        <div id="icons">
+           <a href=""><i class="fa-solid fa-magnifying-glass"></i></a> 
+           <a href="login.html"><i class="fa-solid fa-user"></i></a>
+           <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div> 
+    </div>
+    <div id="pageTitle">
+        <p id="Title">Necklaces</p>
+    </div>
+    <div id="filters">
+        <p>Filter : <select id="filter-price">
+            <option value="">Price</option>
+            <option value="Desc">High To Low</option>
+            <option value="Acs">Low To High</option>
+        </select></p> 
+        <p>Short : <span><select id="short">
+            <option value="">Featured</option>
+            <option value="Acs">A to Z</option>
+            <option value="Desc">Z to A</option>
+        </select></span></p>
+    </div>
+    <div id="home_prod">     
+    </div>
+    <div id="otherinfo">
+        <div id="webinfo">
+            <div id="info">
+                <h3>Info</h3>
+                <p>Search</p>
+                <p>Term of Service</p>
+                <p>Refund Policy</p>
+                <p>Wholesale</p>
+                <p>Wholesale Signup Form</p>
+                <p>Shipping</p>
+            </div>
+            <div id="contact">
+                <h3>Contact Us!</h3>
+                <p>Need to talk? Reach us via email, phone or text!</p>
+                <p id="cont">Email: Customerservice@Lovoda.com</p>
+                <p id="cont">Phone: (443) 500-1200</p>
+                <p id="msg">**Msg &data rates may apply</p>
+            </div>
+        </div>
+        <div id="social">
+            <div id="email">
+                <p>Subscribe to our emails</p>
+                <input type="email" placeholder="Email">
+            </div>
+            <div id="socialmedia">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-pinterest"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-tiktok"></i>
+            </div>
+        </div>
+
+    </div>
+    <div id="cards">
+        <img src="https://drive.google.com/uc?export=view&id=1OlFGadgnnTklKagQhiz3HKSF-d7qhCol" alt="">
+        <p>© 2022, Lovoda Powered by Shopify</p>
+    </div>
+    
+</div>
+</body>
+</html>
+<script>
+    let allProd=[
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L201000-2__49671_823x.jpg?v=1645116352",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L201000-3__93474_823x.jpg?v=1645116355",
+            name:"Samba Charm Necklace",
+            price:"$24.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L201006-2__28603_493x.jpg?v=1645116368",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L201006-3__15448_493x.jpg?v=1645116370",
+            name:"Double Double Necklace",
+            price:"$16.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/020400079-3__32862_493x.jpg?v=1645115394",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/IMG_5090__61478_493x.jpg?v=1645115397",
+            name:"Shine Bright Y-Necklace (14K)",
+            price:"$24.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L201011-2__52444_493x.jpg?v=1645116103",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L201011-3__04676_493x.jpg?v=1645116105",
+            name:"Othello Layered Necklace",
+            price:"$18.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L201010-1__26041_493x.jpg?v=1645116374",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L201010-3__55417_493x.jpg?v=1645116376",
+            name:"Laertes Layered Necklace",
+            price:"$18.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/020100575-4__97470_493x.jpg?v=1645115770",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/020100575-3__08128_493x.jpg?v=1645115772",
+            name:"Perfect Link Necklace",
+            price:"$18.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/020100370-2__34904_493x.jpg?v=1645113593",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/020200058__13997_493x.jpg?v=1645113595",
+            name:"Boheme Stone Necklace (14K)",
+            price:"$30.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/020100463-1__46464_493x.jpg?v=1645112739",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/020100463-3__29850_493x.jpg?v=1645112741",
+            name:"Antigone Necklace (14K)",
+            price:"$18.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/020100565-2__58904_493x.jpg?v=1645114959",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/020100565-4__69487_493x.jpg?v=1645114961",
+            name:"Modern Minimalist Bar Necklace (14K)",
+            price:"$14.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/020100562_2__87633_493x.jpg?v=1645115402",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/020100562-4__94244_493x.jpg?v=1645115404",
+            name:"Sunset Circle Necklace (14K)",
+            price:"$14.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/020500259-1__20614_493x.jpg?v=1645112658",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/020500259-4__26964_493x.jpg?v=1645112654",
+            name:"Ombre Stone Tear Necklace",
+            price:"$18.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L201005-2__41179_493x.jpg?v=1645115930",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L201005-3__67325_493x.jpg?v=1645115932",
+            name:"Hamlet Layered Necklace",
+            price:"$18.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/020100564_1__30590_493x.jpg?v=1645115343",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/020100564-4__22201_493x.jpg?v=1645115344",
+            name:"Sparkling Stone Necklace (14K)",
+            price:"$14.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/020200068-1__84305_493x.jpg?v=1645114242",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/020200068-5__58390_493x.jpg?v=1645114243",
+            name:"Diamonds Are Forever Necklace (14K)",
+            price:"$18.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/020500296-3__04809_493x.jpg?v=1645113004",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/020500295-3__24966_493x.jpg?v=1645113006",
+            name:"Pixum Compass Stone Necklace",
+            price:"$20.00",
+        },
+        {
+            img_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/020100370-3__30961_493x.jpg?v=1645111658",
+            hov_url:"https://cdn.shopify.com/s/files/1/0627/7388/7215/products/020100369-3__28478_493x.jpg?v=1645111643",
+            name:"Horizon Necklace",
+            price:"$16.00",
+        },
+    ]
+    let charArr = JSON.parse(localStorage.getItem("chartItem")) || [];
+     let buyArr = JSON.parse(localStorage.getItem("buyItem")) || [];
+     let prodDiv = document.querySelector("#home_prod")
+     displayProd(allProd)
+
+
+     //filter by price =>>>>
+     document.querySelector("#filter-price").addEventListener("change",PriceSort);
+
+  function PriceSort(){
+    let selected = document.querySelector("#filter-price").value;
+    if(selected == "Acs"){
+      allProd.sort(function(a,b){
+        if(a.price > b.price) return 1;
+        if(a.price < b.price) return -1;
+        return 0;
+      })
+      displayProd(allProd)
+    }
+    if(selected == "Desc"){
+      allProd.sort(function(a,b){
+        if(a.price > b.price) return -1;
+        if(a.price < b.price) return 1;
+        return 0;
+      })
+      displayProd(allProd)
+    }
+  }
+  
+  
+  //filter by alphabets;
+  document.querySelector("#short").addEventListener("change",NameSort);
+
+function NameSort(){
+  let selected = document.querySelector("#short").value;
+  if(selected == "Acs"){
+    allProd.sort(function(a,b){
+      if(a.name > b.name) return 1;
+      if(a.name < b.name) return -1;
+      return 0;
+    })
+    displayProd(allProd)
+  }
+  if(selected == "Desc"){
+    allProd.sort(function(a,b){
+      if(a.name > b.name) return -1;
+      if(a.name < b.name) return 1;
+      return 0;
+    })
+    displayProd(allProd)
+  }
+}
+
+
+  
+
+    function displayProd(data){
+        document.querySelector("#home_prod").innerHTML = ""
+    allProd.forEach(function(ele){
+        let box = document.createElement("div");
+
+        let prodImg = document.createElement("img");
+        prodImg.setAttribute("src",ele.img_url)
+        prodImg.addEventListener("mouseover",changeimg)
+        prodImg.addEventListener("mouseout",returnimg)
+          
+        
+        let prodName = document.createElement("p");
+        prodName.innerText=ele.name
+
+        let prodPrice = document.createElement("p");
+        prodPrice.innerText = ele.price
+
+        let btns = document.createElement("div")
+        btns.id="btnDiv"
+        
+        let btn1 = document.createElement("button")
+        btn1.innerText="Add"
+        btn1.id = "cart"
+        btn1.addEventListener("click",addtoCart);
+
+        function addtoCart(){
+            charArr.push(ele);
+            localStorage.setItem("cartItem", JSON.stringify(charArr))
+        }
+
+        let btn2 = document.createElement("button")
+        btn2.innerText = "Buy"
+        btn2.id = "buy"
+        btn2.addEventListener("click",buyNow);
+        function buyNow(){
+            buyArr.push(ele);
+            localStorage.setItem("buyItem",JSON.stringify(buyArr))
+        }
+        function buyNow(){
+            window.location.href = "checkout.html"
+        }
+        btns.append(btn1,btn2)
+
+        
+        box.append(prodImg,prodName,prodPrice,btns)
+        prodDiv.append(box)
+
+        function changeimg(){
+        prodImg.setAttribute("src",ele.hov_url)
+        }
+
+        function returnimg(){
+            prodImg.setAttribute("src",ele.img_url)
+        }
+    })
+}
+</script>

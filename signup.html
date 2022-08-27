@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/24c494a6b6.js"
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+  <div id="container">
+    <div id="announcement-bar">
+        <p id="lable">Free Shipping on Orders Over $75 and Free Returns (US ONLY)</p>
+    </div>
+    <div id="navbar">
+        <div id="content">
+            <div id="img">
+            <img src="https://cdn.shopify.com/s/files/1/0627/7388/7215/files/04122019_logo2_90x.png?b=allow_avif&v=1645644264" alt="lovoda logo">
+            </div> 
+        <div id="links">
+        <a href="index.html"><p>Home</p></a>
+        <a href="ear.html"><p>Earrings</p></a>
+        <a href="necklace.html"><p>Necklaces</p></a>
+        <a href="bracelets.html"><p>Bracelets</p></a>
+        <a href="rings.html"><p>Rings</p></a>
+        </div>
+        </div>
+        <div id="icons">
+           <a href=""><i class="fa-solid fa-magnifying-glass"></i></a> 
+           <a href="login.html"><i class="fa-solid fa-user"></i></a>
+           <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div> 
+    </div>
+    <div id="Account">
+        <form>
+            <p id="Title">Create Account</p>
+            <div id="fb">
+                <i class="fa-brands fa-facebook"></i><Span id="fbs">Continue With Facebook</Span>
+            </div>
+            <div id="google">
+                <i class="fa-brands fa-google-plus"></i><span id="g">Google</span>
+            </div>
+            <div id="amz">
+                <i class="fa-brands fa-amazon"></i><span id="az">Amazon</span>
+            </div>
+            <input id="nmf" type="text" placeholder="First Name">
+            <input id="nml" type="text" placeholder="Last Name">
+            <input id="email2" type="email" placeholder="Email">
+            <input id="pass" type="text" placeholder="Password">
+            <p id="p">Subscribe For Newsletter</p>
+            <button>Create</button>
+            <a href="login.html"><p id="Cr">Login</p></a>
+        </form>
+    </div>
+    <div id="home_prod">     
+    </div>
+    <div id="otherinfo">
+        <div id="webinfo">
+            <div id="info">
+                <h3>Info</h3>
+                <p>Search</p>
+                <p>Term of Service</p>
+                <p>Refund Policy</p>
+                <p>Wholesale</p>
+                <p>Wholesale Signup Form</p>
+                <p>Shipping</p>
+            </div>
+            <div id="contact">
+                <h3>Contact Us!</h3>
+                <p>Need to talk? Reach us via email, phone or text!</p>
+                <p id="cont">Email: Customerservice@Lovoda.com</p>
+                <p id="cont">Phone: (443) 500-1200</p>
+                <p id="msg">**Msg &data rates may apply</p>
+            </div>
+        </div>
+        <div id="social">
+            <div id="email">
+                <p>Subscribe to our emails</p>
+                <input type="email" placeholder="Email">
+            </div>
+            <div id="socialmedia">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-pinterest"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-tiktok"></i>
+            </div>
+        </div>
+
+    </div>
+    <div id="cards">
+        <img src="https://drive.google.com/uc?export=view&id=1OlFGadgnnTklKagQhiz3HKSF-d7qhCol" alt="">
+        <p>© 2022, Lovoda Powered by Shopify</p>
+    </div>
+    
+</div>
+</body>
+</html>
+<script>
+     let signupArr = JSON.parse(localStorage.getItem("signupData")) || []
+     document.querySelector("form").addEventListener("submit",signup);
+
+     function signup(event){
+      event.preventDefault()
+      window.location.href = "login.html"
+      alert("Sign Up successfull")
+      let firstName = document.querySelector("#nmf").value
+      let lastName = document.querySelector("#nml").value
+      let enteredEmail = document.querySelector("#email2").value
+      let pass = document.querySelector("#pass").value
+
+      localStorage.setItem("firstname",firstName)
+      localStorage.setItem("lastname",lastName)
+      localStorage.setItem("email",enteredEmail)
+      localStorage.setItem("password",pass)
+     }
+</script>

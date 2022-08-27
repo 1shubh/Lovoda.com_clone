@@ -45,19 +45,19 @@
             <p>Total</p>
         </div>
 <div id="cartProd">
-        <div id="cartItems">
+        <!-- <div id="cartItems">
         <div id="Cart_items">  
-            <img src="https://cdn.shopify.com/s/files/1/0627/7388/7215/products/010100310-3__23072_300x.jpg?v=1645111847" alt="">
-            <div id="itemInfo">
-                <p>10mm Palette Earrings (14K Rose Gold)</p> 
-                <p>10$</p>
-            </div>  
-        </div>
-        <p>Delete</p>
+            <!-- image -->
+            <!-- <div id="itemInfo"> -->
+                <!-- <p>10mm Palette Earrings (14K Rose Gold)</p> 
+                <p>10$</p> -->
+            <!-- </div>   -->
+        <!-- </div>
+        <p id="delete"></p>
         <div id="cost">
-            <p><span id="totalcost">$10.00</span></p>
-        </div>
-    </div>
+            <!-- <p><span id="totalcost">$10.00</span></p> -->
+        <!-- </div> -->
+    <!-- </div> --> 
 </div>
 <div id="paynow">
     <div id="click">
@@ -113,3 +113,45 @@
     
 </body>
 </html>
+<script>
+   let charArr = JSON.parse(localStorage.getItem("cartProducts")) || [];
+   console.log(charArr)
+   let mainBox = document.querySelector("#cartProd")  
+    
+      charArr.forEach(function(ele){
+        let innerBox = document.createElement("div")
+        innerBox.id = "cartItems" //innerbox
+       ///box1 
+        let box1 = document.createElement("div")
+        box1.id = "Cart_items"
+        //product image
+        let image = document.createElement("img")
+        image.setAttribute("src",ele.img_url)
+        
+        //box for name and price
+        let box1InnerDIv = document.createElement("div");
+        box1InnerDIv.id = "itemInfo"
+        
+        let prodName = document.createElement("p")
+        prodName.innerText = ele.name;
+
+        let prodPrice = document.createElement("p")
+        prodPrice.innerText = ele.price
+        box1InnerDIv.append(prodName,prodPrice)
+
+        box1.append(image,box1InnerDIv) ///box1 complete
+        
+        let removeItem = document.createElement("p")
+        removeItem.innerText = "Delete"
+
+        let box2 = document.createElement("div")
+        box2.id = "cost" 
+        let totalcost = document.createElement("p")
+        totalcost.innerText = ele.price
+
+        box2.append(totalcost)
+        innerBox.append(box1,removeItem,box2)
+        mainBox.append(innerBox)
+      })
+
+</script>
