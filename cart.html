@@ -12,6 +12,9 @@
 </head>
 <body>
     <div id="container">
+        <div class="popup" id="search">
+            <input type="search" id="searchbar" placeholder="search"><button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></a></button><button id="cross">X</button>
+        </div>
         <div id="announcement-bar">
             <p id="lable">Free Shipping on Orders Over $75 and Free Returns (US ONLY)</p>
         </div>
@@ -29,15 +32,15 @@
             </div>
             </div>
             <div id="icons">
-               <a href=""><i class="fa-solid fa-magnifying-glass"></i></a> 
+                <button id="clicksearch"><i class="fa-solid fa-magnifying-glass"></i></button>  
                <a href="login.html"><i class="fa-solid fa-user"></i></a>
-               <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+               <a href="cart.html" id="carticon"><i class="fa-solid fa-cart-shopping"></i></a><span id="cartCount"></span>
             </div> 
         </div>
         
         <div id="Carttitle">
             <p id="head">Your Cart</p>
-            <p id="cont">Continue Shopping</p>
+            <a href="index.html"><p id="cont">Continue Shopping</p></a>
         </div>
         <div id="products">
             <p>Products</p>
@@ -115,10 +118,12 @@
 </html>
 <script>
    let charArr = JSON.parse(localStorage.getItem("cartProducts")) || [];
-   console.log(charArr)
+
    let mainBox = document.querySelector("#cartProd")  
-    
-      charArr.forEach(function(ele){
+    function displayprod(data){
+      mainBox.innerHTML = ""
+      data.forEach(function(ele,i){
+
         let innerBox = document.createElement("div")
         innerBox.id = "cartItems" //innerbox
        ///box1 
@@ -136,22 +141,52 @@
         prodName.innerText = ele.name;
 
         let prodPrice = document.createElement("p")
-        prodPrice.innerText = ele.price
+        prodPrice.innerText = `$ ${ele.price}`
         box1InnerDIv.append(prodName,prodPrice)
 
         box1.append(image,box1InnerDIv) ///box1 complete
         
         let removeItem = document.createElement("p")
-        removeItem.innerText = "Delete"
+        removeItem.innerText = "Remove"
+        removeItem.addEventListener("click",function(){
+            deleteItem(charArr,i)
+        })
 
         let box2 = document.createElement("div")
         box2.id = "cost" 
         let totalcost = document.createElement("p")
-        totalcost.innerText = ele.price
+        totalcost.innerText = `$ ${ele.price}`
+
+        let total = charArr.reduce(function(acc,el,i){
+            return Number(acc) + Number(el.price)
+        },0)
+        document.querySelector("#subtotal").innerText = `$ ${total}`
 
         box2.append(totalcost)
         innerBox.append(box1,removeItem,box2)
         mainBox.append(innerBox)
       })
+      document.querySelector("#cartCount").innerText = `(${data.length})`
+    }
+    displayprod(charArr)
+
+    function deleteItem(array,index) {
+    charArr = array.filter(function(element,i){
+        return i != index
+    })
+    localStorage.setItem("cartProducts",JSON.stringify(charArr))
+    displayprod(charArr)
+  }
+  let popup = document.querySelector("#search")
+    document.querySelector("#clicksearch").addEventListener("click", openpopup);
+
+    function openpopup(){
+      popup.classList.add("open_popup")
+    }
+    document.querySelector("#cross").addEventListener("click", closepopup);
+
+    function closepopup(){
+      popup.classList.remove("open_popup")
+    }
 
 </script>

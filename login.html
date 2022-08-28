@@ -12,6 +12,9 @@
 </head>
 <body>
   <div id="container">
+    <div class="popup" id="search">
+        <input type="search" id="searchbar" placeholder="search"><button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></a></button><button id="cross">X</button>
+    </div>
     <div id="announcement-bar">
         <p id="lable">Free Shipping on Orders Over $75 and Free Returns (US ONLY)</p>
     </div>
@@ -29,7 +32,7 @@
         </div>
         </div>
         <div id="icons">
-           <a href=""><i class="fa-solid fa-magnifying-glass"></i></a> 
+            <button id="clicksearch"><i class="fa-solid fa-magnifying-glass"></i></button>  
            <a href="login.html"><i class="fa-solid fa-user"></i></a>
            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
         </div> 
@@ -109,10 +112,22 @@
     
     if(loginemail === load_email && loginPass === load_pass){
         alert("sign in Successfull")
-        window.location.href = "chart.html"
+        window.location.href = "cart.html"
     }else{
         alert("incorrect email or password")
     }
+    }
+
+    let popup = document.querySelector("#search")
+    document.querySelector("#clicksearch").addEventListener("click", openpopup);
+
+    function openpopup(){
+      popup.classList.add("open_popup")
+    }
+    document.querySelector("#cross").addEventListener("click", closepopup);
+
+    function closepopup(){
+      popup.classList.remove("open_popup")
     }
 
 </script>

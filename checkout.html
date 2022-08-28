@@ -286,29 +286,77 @@
             </div>
             <div id="place">
                 <a href="cart.html"> < Return To Cart</a>
-                <button>Continue To Shipping</button>
+                <button id="buttonshipping">Continue To Shipping</button>
             </div>
         </div>
         <div id="prod-info">
             <div id="iteminfo">
-            <div id="buyitem">
-                    <img src="https://cdn.shopify.com/s/files/1/0627/7388/7215/products/010100309-1__20452_small.jpg?v=1645111798" alt="">
-                    <p>10mm Palette Earrings (14K Rose Gold)</p> 
-            </div>
-            <div id="costdiv">
-                <p id="itemcost">50</p>
-            </div>
            </div>
            <div id="itemprices">
               <p>Total</p>
-              <p>USD: <span id="total-itemcost"></span></p>
+              <p><span id="total-itemcost"></span></p>
            </div>
         </div>
     </div>
 </body>
 </html>
 <script>
-    let buyArr = JSON.parse(localStorage.getItem("buyItem")) || [];
-    let products = JSON.parse(localStorage.getItem("chartItem")) || []; 
-    console.log(buyArr,products)
+    let charArr = JSON.parse(localStorage.getItem("cartProducts")) || [];
+    let buyArr = JSON.parse(localStorage.getItem("buyProducts")) || []
+
+    document.querySelector("#entermail").innerText = localStorage.getItem("email")
+    console.log(charArr)
+
+    let buyDiv = document.querySelector("#iteminfo")
+
+        charArr.map(function(ele){
+            let box1 = document.createElement("div")
+            box1.id = "buyitem"
+            let image = document.createElement("img")
+            image.setAttribute("src",ele.img_url)
+            let prodName = document.createElement("p")
+            prodName.innerText = ele.name;
+
+            box1.append(image,prodName)
+
+            let box2 = document.createElement("div")
+            box2.id = "costdiv"
+            let prodPrice = document.createElement("p")
+            prodPrice.innerText = `$ ${ele.price}`
+
+            box2.append(prodPrice)
+            buyDiv.append(box1,box2)
+
+            let total = charArr.reduce(function(acc,el,i){
+            return Number(acc) + Number(el.price)
+            },0)
+           document.querySelector("#total-itemcost").innerText = `USD : $ ${total}`
+        })
+        buyArr.map(function(ele){
+            let box1 = document.createElement("div")
+            box1.id = "buyitem"
+            let image = document.createElement("img")
+            image.setAttribute("src",ele.img_url)
+            let prodName = document.createElement("p")
+            prodName.innerText = ele.name;
+
+            box1.append(image,prodName)
+
+            let box2 = document.createElement("div")
+            box2.id = "costdiv"
+            let prodPrice = document.createElement("p")
+            prodPrice.innerText = `$ ${ele.price}`
+
+            box2.append(prodPrice)
+            buyDiv.append(box1,box2)
+
+           document.querySelector("#total-itemcost").innerText = `USD : $ ${ele.price}`
+        })
+
+        document.querySelector("#buttonshipping").addEventListener("click", shipping);
+
+        function shipping(){
+            alert("Your Order successfully placed")
+            document.location.href="index.html"
+        }
 </script>

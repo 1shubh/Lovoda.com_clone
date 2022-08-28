@@ -2,9 +2,59 @@ body{
     background-color: #FFFF;
     margin: 0px;
 }
+.popup{
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+    transform: scale(0.1);
+    background-color:white;
+    position: absolute;
+    visibility:hidden;
+    transition: transform 0.4s, top 0.10s;
+}
+.open_popup{
+    visibility: visible;
+    transform: scale(1);
+}
+#search > #searchbar{
+    width: 40%;
+    height: 50px;
+    font-size: 20px;
+}
+#searchBtn,#clicksearch{
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+#searchBtn:hover{
+    color:#121212BF;
+}
+#carticon{
+    position: relative;
+}
+#cartCount{
+    color:#121212;
+    font-size: 15px;
+    position: absolute;
+    right: 205px;
+    margin-bottom: 10px;
+}
+#clicksearch{
+    background-color: transparent;
+    font-size: 20px;
+    margin-top: 5px;
+}
+#cross{
+  background-color: transparent;
+  cursor: pointer ;
+  font-size: 20px;
+  border: none;
+}
 #announcement-bar{
    border-bottom: 1px solid #ceb9b9bf;
    height:30px;
+   position: relative;
 }
 
 #lable{
@@ -108,7 +158,7 @@ body{
     font-size: 16px;
 }
 #home_prod{
-    width: 75%;
+    width: 71%;
     margin: auto;
     gap: 10px;
     display: grid;
@@ -390,6 +440,7 @@ font-size: 18px;
     border: 0px solid red;
     width: 40%;
     height: 750px;
+    position: relative;
 }
 #contact-info>img{
     margin-left: 30px;
@@ -457,26 +508,35 @@ form >input,form>select{
     background-color: #fbf2f2;
 }
 #iteminfo{
-    border:0px solid black;
-    display: flex;
-    justify-content: space-evenly;
+   
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 50px;
+    row-gap: 20px;
     width: 80%;
     margin: auto;
     margin-top: 30px;
 }
 #buyitem{
+    
+    width: 100%;
     display: flex;
     font-family: sans-serif;
     font-size: 14px;
     gap: 10px;
 }
 #buyitem>img{
+  width:30%;
   border: 1px solid #ceb9b9bf;
+  border-radius: 5px;
+}
+#costdiv{
+    text-align: right;
 }
 #itemprices{
     border-top: 1px solid #ceb9b9bf;
     border-bottom: 1px solid #ceb9b9bf;
-    width: 70%;
+    width: 80%;
     margin: auto;
     margin-top: 20px;
     height: 100px;
@@ -487,8 +547,8 @@ form >input,form>select{
     align-items: center;
 }
 #pageTitle{
-    width: 50%;
-    margin-left: 185px;
+    width: 72%;
+    margin: auto;
 }
 #pageTitle>p{
     font: 40px Assistant,sans-serif;
@@ -497,7 +557,7 @@ form >input,form>select{
 #filters{
     display: flex;
     justify-content: space-between;
-    width: 75%;
+    width: 70%;
     margin: auto;
     font: 14px Assistant,sans-serif;
     color: #121212D9;
@@ -635,6 +695,19 @@ form > #email2{
 #nmf:hover,#nml:hover,#email:hover,#email2:hover,#pass:hover{
     border: 2px solid #121212;
 
+}
+#entermail{
+    color: blueviolet;
+    font-size: 13px;
+    margin-left:10px;
+    cursor: pointer;
+}
+#entermail:hover{
+    font-size: 14px;
+    text-decoration: underline;
+}
+#buttonshipping:hover{
+    cursor: pointer;
 }
 
 
